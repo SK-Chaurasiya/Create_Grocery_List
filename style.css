@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 6px;
+  box-shadow: inset 10px 20px rgba(255, 255, 255, 0.25), inset -10px -10px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========== main body style =========== */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #302b63;
+  background: linear-gradient(rgba(17, 17, 17, 0.5), rgba(0, 0, 0, 0.5)), url(./image/onojeghuo.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  backdrop-filter: blur(2px);
+}
+
+.container {
+  position: relative;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.container .box {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+}
+
+.container .box h2 {
+  font-size: 1.75em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+}
+
+.container .box h2::before {
+  content: '';
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  width: 100px;
+  height: 2px;
+  transform: translate(-50%, -50%);
+  background: white;
+}
+
+.container .box #grocery {
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 6px;
+}
+
+.container .box #grocery input {
+  position: relative;
+  width: 100%;
+  padding: 10px 20px;
+  border: 0;
+  color: white;
+  font-size: .9rem;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background-color: transparent;
+  border-radius: 25px;
+  outline: none;
+}
+
+.container .box #grocery input::placeholder {
+  color: #ffffff;
+}
+
+.container .box #grocery button {
+  background: #ff8d36;
+  color: #0f0c29;
+  min-width: 100px;
+  font-weight: 500;
+  border-radius: 25px;
+  border: 0;
+  border: 1px solid #333333;
+  cursor: pointer;
+  outline: none;
+}
+
+.container ol {
+  position: relative;
+  padding: 10px 20px 10px 40px;
+  width: 100%;
+  max-height: 350px;
+  overflow-y: auto;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  border-radius: 6px;
+  box-shadow: inset 10px 20px 20px rgba(0, 0, 0, 0.5), inset -10px -20px 20px rgba(0, 0, 0, 0.5);
+}
+
+.container ol li {
+  position: relative;
+  font-size: 1.2em;
+  padding: 5px;
+  color: white;
+
+}
+
+.container ol li .remove {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  color: white;
+  background: url(./image/close.png);
+  background-size: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.container ol li p.done {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.container ol li p.done:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 35px;
+  width: 25px;
+  height: 25px;
+  background: url(./image/correct.png);
+  background-size: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  background: #333333;
+  text-align: center;
+  padding: 10px;
+}
+
+footer p{
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 0;
+}
+
+@media (max-width:425px) {
+  body {
+    padding: 30px 20px;
+  }
+
+  .container {
+    gap: 10px;
+  }
+
+  .container .box {
+    padding: 10px;
+  }
+
+  .container .box h2::before{
+    top: 50px;
+  }
+
+  .container .box #grocery {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .container .box #grocery button {
+    padding: 10px;
+  }
+
+  footer p{
+    font-size: .8rem;
+  }
+}
+
+
+/* All Copy-Rights Received by White Hat Designer */
