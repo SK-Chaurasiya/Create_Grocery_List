@@ -1,4 +1,4 @@
-# Create_Grocery_Lis
+# Create_Grocery_List
 This code is for beginners to understand and if you are good in JavaScript then it is good for them also.
 
 Buy a Coffee for me:- https://www.buymeacoffee.com/imstark202u
